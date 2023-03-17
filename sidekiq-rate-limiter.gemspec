@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/enova/sidekiq-rate-limiter"
   s.summary     = %q{Redis-backed, per-worker rate limits for job processing}
   s.description = %q{Redis-backed, per-worker rate limits for job processing}
-  s.rubyforge_project = "nowarning"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -24,7 +23,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry-byebug"
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", '~> 3.4'
-  s.add_development_dependency "coveralls", '~> 0.8'
+  s.add_development_dependency "simplecov"
+  s.add_development_dependency "simplecov-lcov", '~> 0.8.0'
 
   s.add_dependency "sidekiq", ">= 4.0", "< 7.0"
   s.add_dependency "redis_rate_limiter"
